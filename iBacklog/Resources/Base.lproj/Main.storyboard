@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BCL-al-2bo">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product Backlog-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iBacklog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="baY-ZD-HfV">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userstoryCell" id="g5E-uj-Tu1" customClass="UserstoryTableViewCell" customModule="iBacklog" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g5E-uj-Tu1" id="V2a-qM-DJA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="149.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4g-Lv-fxp">
+                                                    <rect key="frame" x="36" y="27" width="342" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIC-wC-rFo">
+                                                    <rect key="frame" x="36" y="63.5" width="342" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pIC-wC-rFo" secondAttribute="trailing" constant="16" id="58Q-ui-Hc5"/>
+                                                <constraint firstItem="u4g-Lv-fxp" firstAttribute="leading" secondItem="V2a-qM-DJA" secondAttribute="leadingMargin" constant="16" id="DlZ-1r-K9G"/>
+                                                <constraint firstItem="pIC-wC-rFo" firstAttribute="leading" secondItem="V2a-qM-DJA" secondAttribute="leadingMargin" constant="16" id="GvF-d1-IxS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="u4g-Lv-fxp" secondAttribute="trailing" constant="16" id="Rra-wz-EcG"/>
+                                                <constraint firstItem="u4g-Lv-fxp" firstAttribute="top" secondItem="V2a-qM-DJA" secondAttribute="topMargin" constant="16" id="doD-24-NmE"/>
+                                                <constraint firstItem="pIC-wC-rFo" firstAttribute="top" secondItem="u4g-Lv-fxp" secondAttribute="bottom" constant="16" id="qGr-b9-bnk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userstoryDescriptionLabel" destination="u4g-Lv-fxp" id="xp4-AN-rTT"/>
+                                            <outlet property="userstoryStorypointsLabel" destination="pIC-wC-rFo" id="CeK-aK-En3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9lo-tH-ka1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pBD-xd-eRq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="baY-ZD-HfV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Ry-7f-LfC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="baY-ZD-HfV" secondAttribute="bottom" id="azd-Qf-TfP"/>
+                            <constraint firstItem="baY-ZD-HfV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jKI-ce-Du0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="baY-ZD-HfV" secondAttribute="trailing" id="jSa-Ru-tJb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Product Backlog" id="Lwm-CP-rWB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ldI-Ii-aQ5">
+                            <connections>
+                                <segue destination="viR-Mf-iyq" kind="presentation" id="qTT-XJ-l2S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="userstoryTableView" destination="baY-ZD-HfV" id="W3R-jo-j48"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="733"/>
+        </scene>
+        <!--Add Userstory View Controller-->
+        <scene sceneID="SGq-2R-jgJ">
+            <objects>
+                <viewController id="viR-Mf-iyq" customClass="AddUserstoryViewController" customModule="iBacklog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UQ3-3b-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Historia de usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QjI-Gz-bhk">
+                                <rect key="frame" x="16" y="60" width="382" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="viR-Mf-iyq" id="Gvt-fg-EPv"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Storypoints" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqa-kO-Mqq">
+                                <rect key="frame" x="16" y="106" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lO-VQ-BHc">
+                                <rect key="frame" x="76.5" y="800" width="61" height="30"/>
+                                <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <action selector="cancelButtonDidTapped:" destination="viR-Mf-iyq" eventType="touchUpInside" id="dua-W3-zfg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpr-E6-Des">
+                                <rect key="frame" x="279" y="800" width="56" height="30"/>
+                                <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="saveButtonDidTapped:" destination="viR-Mf-iyq" eventType="touchUpInside" id="myQ-tt-MR6"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="seT-ge-P9v">
+                                <rect key="frame" x="16" y="143" width="382" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="3"/>
+                                    <segment title="5"/>
+                                    <segment title="8"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8lO-VQ-BHc" firstAttribute="centerX" secondItem="UQ3-3b-4ec" secondAttribute="centerX" constant="-100" id="5LK-oX-Hht"/>
+                            <constraint firstItem="9xe-hZ-O4B" firstAttribute="trailing" secondItem="sqa-kO-Mqq" secondAttribute="trailing" constant="16" id="5Nz-5y-RDu"/>
+                            <constraint firstItem="QjI-Gz-bhk" firstAttribute="leading" secondItem="9xe-hZ-O4B" secondAttribute="leading" constant="16" id="HUI-Pn-mdi"/>
+                            <constraint firstItem="QjI-Gz-bhk" firstAttribute="top" secondItem="9xe-hZ-O4B" secondAttribute="top" constant="16" id="RJD-8Q-la6"/>
+                            <constraint firstItem="sqa-kO-Mqq" firstAttribute="top" secondItem="QjI-Gz-bhk" secondAttribute="bottom" constant="16" id="TUp-5n-EeY"/>
+                            <constraint firstItem="9xe-hZ-O4B" firstAttribute="trailing" secondItem="QjI-Gz-bhk" secondAttribute="trailing" constant="16" id="U8y-cl-QDA"/>
+                            <constraint firstItem="seT-ge-P9v" firstAttribute="leading" secondItem="9xe-hZ-O4B" secondAttribute="leading" constant="16" id="YvQ-O5-ezN"/>
+                            <constraint firstItem="seT-ge-P9v" firstAttribute="top" secondItem="sqa-kO-Mqq" secondAttribute="bottom" constant="16" id="cqJ-P4-Zn3"/>
+                            <constraint firstItem="9xe-hZ-O4B" firstAttribute="bottom" secondItem="dpr-E6-Des" secondAttribute="bottom" constant="32" id="dOy-C8-XT5"/>
+                            <constraint firstItem="9xe-hZ-O4B" firstAttribute="trailing" secondItem="seT-ge-P9v" secondAttribute="trailing" constant="16" id="dcz-wm-Fmf"/>
+                            <constraint firstItem="9xe-hZ-O4B" firstAttribute="trailing" secondItem="seT-ge-P9v" secondAttribute="trailing" constant="16" id="hFB-Bn-cVY"/>
+                            <constraint firstItem="sqa-kO-Mqq" firstAttribute="leading" secondItem="9xe-hZ-O4B" secondAttribute="leading" constant="16" id="tLD-PX-oYK"/>
+                            <constraint firstItem="9xe-hZ-O4B" firstAttribute="bottom" secondItem="8lO-VQ-BHc" secondAttribute="bottom" constant="32" id="tNi-BO-kct"/>
+                            <constraint firstItem="dpr-E6-Des" firstAttribute="centerX" secondItem="UQ3-3b-4ec" secondAttribute="centerX" constant="100" id="vfa-6l-Qdj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9xe-hZ-O4B"/>
+                    </view>
+                    <connections>
+                        <outlet property="storypointsSegmentedControl" destination="seT-ge-P9v" id="i7U-qL-lkC"/>
+                        <outlet property="usertstoryDescriptionTextField" destination="QjI-Gz-bhk" id="EEF-4V-Cid"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mb-3a-JW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1674" y="733"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lsd-VX-hDc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BCL-al-2bo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SGg-zY-pI5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="q7K-Hl-leC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxh-BJ-gOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-59.420289855072468" y="732.58928571428567"/>
+        </scene>
+    </scenes>
+</document>
